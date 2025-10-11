@@ -29,15 +29,33 @@ const ContactForm: FC = memo(() => {
     [data],
   );
 
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+  const [error, setError] = useState<string | null>(null);
+
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      /**
-       * This is a good starting point to wire up your form submission logic
-       * */
-      console.log('Data to send: ', data);
+      setStatus('sending');
+      setError(null);
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(data),
+        });
+        if (!res.ok) {
+          const body = await res.json().catch(() => ({}));
+          throw new Error(body.error || 'Failed to send message');
+        }
+        setStatus('sent');
+        setData(defaultData);
+      } catch (e) {
+        const msg = e instanceof Error ? e.message : 'Failed to send message';
+        setError(msg);
+        setStatus('error');
+      }
     },
-    [data],
+    [data, defaultData],
   );
 
   const inputClasses =
@@ -45,7 +63,7 @@ const ContactForm: FC = memo(() => {
 
   return (
     <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
-      <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" />
+  <input className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" value={data.name} />
       <input
         autoComplete="email"
         className={inputClasses}
@@ -54,6 +72,7 @@ const ContactForm: FC = memo(() => {
         placeholder="Email"
         required
         type="email"
+        value={data.email}
       />
       <textarea
         className={inputClasses}
@@ -63,13 +82,16 @@ const ContactForm: FC = memo(() => {
         placeholder="Message"
         required
         rows={6}
+        value={data.message}
       />
       <button
         aria-label="Submit contact form"
-        className="w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800"
+        className="w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800 disabled:opacity-60"
+        disabled={status === 'sending'}
         type="submit">
-        Send Message
+        {status === 'sending' ? 'Sending…' : status === 'sent' ? 'Sent ✓' : 'Send Message'}
       </button>
+      {error && <p className="text-sm text-red-400">{error}</p>}
     </form>
   );
 });
