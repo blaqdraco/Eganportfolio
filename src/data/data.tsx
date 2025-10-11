@@ -41,8 +41,9 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Egan Moshi | Civil Engineer & Architectural Designer',
+  description:
+    'Portfolio of Engineer Egan Moshi — civil engineering, architectural design, site supervision and structural detailing in Tanzania.',
 };
 
 /**
