@@ -10,7 +10,7 @@ import {
 
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
+import TikTokIcon from '../components/Icon/TikTokIcon';
 import heroImage from '../images/building-construction-site-with-a-tower-crane-and-engineer-and-workers-paper-cut-style-vector.jpg';
 import porfolioImage1 from '../images/portfolio/IMG-20251011-WA0028.jpg';
 import porfolioImage2 from '../images/portfolio/IMG-20251011-WA0029.jpg';
@@ -21,7 +21,7 @@ import porfolioImage6 from '../images/portfolio/IMG-20251011-WA0033.jpg';
 import porfolioImage7 from '../images/portfolio/IMG-20251011-WA0034.jpg';
 import porfolioImage8 from '../images/portfolio/IMG-20251011-WA0035.jpg';
 import porfolioImage9 from '../images/portfolio/IMG-20251011-WA0036.jpg';
-import porfolioImage10 from '../images/building-construction-site-with-a-tower-crane-and-engineer-and-workers-paper-cut-style-vector.jpg';
+import porfolioImage10 from '../images/portfolio/WhatsApp Image 2025-10-11 at 13.29.20_3dce9a37.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -304,19 +304,24 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      name: 'Eng. Aisha M.',
+      text: 'Egan played a key role in our box culvert construction project. His site sketches and monitoring reports were accurate and saved the team many hours during coordination with contractors.',
+      image: 'https://randomuser.me/api/portraits/women/65.jpg',
     },
     {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
+      name: 'Mr. Samson K.',
+      text: 'A dependable trainee with great attention to detail. Egan assisted with bridge inspections and produced clear inventory records we relied on for prioritizing maintenance works.',
+      image: 'https://randomuser.me/api/portraits/men/32.jpg',
     },
     {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      name: 'Ms. Esther L.',
+      text: 'Egan delivered excellent structural detailing and collaborated well with our drafting team. His use of Prota and AutoCAD improved the turnaround time for our shop drawings.',
+      image: 'https://randomuser.me/api/portraits/women/44.jpg',
+    },
+    {
+      name: 'Eng. John P.',
+      text: 'Professional and proactive — Egan provided valuable site supervision input during periodic road maintenance, and his reports were always concise and useful.',
+      image: 'https://randomuser.me/api/portraits/men/48.jpg',
     },
   ],
 };
@@ -326,18 +331,18 @@ export const testimonial: TestimonialSection = {
  */
 
 export const contact: ContactSection = {
-  headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  headerText: 'Let’s Connect!',
+  description: 'Feel free to reach out for collaborations, project inquiries, or just to say hello. I welcome clients to visit or contact me directly for a friendly conversation about your next project.',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'acgbuilders777@gmail.com',
+      href: 'mailto:acgbuilders777@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Dodoma, Tanzania',
+      href: 'https://www.google.com/maps/place/Dodoma,+Tanzania',
     },
     {
       type: ContactType.Instagram,
@@ -345,9 +350,9 @@ export const contact: ContactSection = {
       href: 'https://www.instagram.com/am_acg__/',
     },
     {
-      type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      type: ContactType.LinkedIn,
+      text: 'Egan Moshi',
+      href: 'https://www.linkedin.com/in/egan-moshi-4aa004314/',
     },
   ],
 };
@@ -358,5 +363,5 @@ export const contact: ContactSection = {
 export const socialLinks: Social[] = [
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/egan-moshi-4aa004314/'},
   {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/am_acg__/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'TikTok', Icon: TikTokIcon, href: 'https://www.tiktok.com/@eng_egan_m?is_from_webapp=1&sender_device=pc'},
 ];

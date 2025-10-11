@@ -1,6 +1,8 @@
 import {FC, memo, PropsWithChildren} from 'react';
 
-const ResumeSection: FC<PropsWithChildren<{title: string}>> = memo(({title, children}) => {
+type Props = PropsWithChildren<{title: string; contentClassName?: string}>;
+
+const ResumeSection: FC<Props> = memo(({title, children, contentClassName}) => {
   return (
     <div className="grid grid-cols-1 gap-y-4 py-8 first:pt-0 last:pb-0  md:grid-cols-4">
       <div className="col-span-1 flex justify-center md:justify-start">
@@ -9,7 +11,7 @@ const ResumeSection: FC<PropsWithChildren<{title: string}>> = memo(({title, chil
           <span className="absolute inset-x-0 -bottom-1 border-b-2 border-orange-400" />
         </div>
       </div>
-      <div className="col-span-1 flex flex-col md:col-span-3">{children}</div>
+      <div className={`col-span-1 flex flex-col md:col-span-3 ${contentClassName ?? ''}`}>{children}</div>
     </div>
   );
 });
