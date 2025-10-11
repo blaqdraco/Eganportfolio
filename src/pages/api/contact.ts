@@ -41,8 +41,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     CONTACT_FROM,
   } = process.env;
 
-  if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS || !CONTACT_TO) {
-    return res.status(500).json({error: 'SMTP is not configured on the server'});
+  const missing: string[] = [];
+  if (!SMTP_HOST) missing.push('SMTP_HOST');
+  if (!SMTP_PORT) missing.push('SMTP_PORT');
+  if (!SMTP_USER) missing.push('SMTP_USER');
+  if (!SMTP_PASS) missing.push('SMTP_PASS');
+  if (!CONTACT_TO) missing.push('CONTACT_TO');
+  if (missing.length) {
+    const isProd = process.env.NODE_ENV === 'production';
+    const message = isProd
+      ? 'SMTP is not configured on the server'
+      : `Missing environment variables: ${missing.join(', ')}`;
+    return res.status(500).json({error: message});
   }
 
   try {
