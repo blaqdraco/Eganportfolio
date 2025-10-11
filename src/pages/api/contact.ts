@@ -7,15 +7,17 @@ type ContactPayload = {
   message: string;
 };
 
-function isValidBody(body: any): body is ContactPayload {
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null;
+}
+
+function isValidBody(body: unknown): body is ContactPayload {
+  if (!isRecord(body)) return false;
+  const {name, email, message} = body as Record<string, unknown>;
   return (
-    body &&
-    typeof body.name === 'string' &&
-    typeof body.email === 'string' &&
-    typeof body.message === 'string' &&
-    body.name.trim() &&
-    body.email.trim() &&
-    body.message.trim()
+    typeof name === 'string' && name.trim() !== '' &&
+    typeof email === 'string' && email.trim() !== '' &&
+    typeof message === 'string' && message.trim() !== ''
   );
 }
 
@@ -72,7 +74,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
 
     return res.status(200).json({ok: true, id: info.messageId});
-  } catch (error: any) {
+  } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('SMTP send error:', error);
     return res.status(500).json({error: 'Failed to send message'});
   }
