@@ -8,23 +8,20 @@ import {
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
-import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+import heroImage from '../images/building-construction-site-with-a-tower-crane-and-engineer-and-workers-paper-cut-style-vector.jpg';
+import porfolioImage1 from '../images/portfolio/IMG-20251011-WA0028.jpg';
+import porfolioImage2 from '../images/portfolio/IMG-20251011-WA0029.jpg';
+import porfolioImage3 from '../images/portfolio/IMG-20251011-WA0030.jpg';
+import porfolioImage4 from '../images/portfolio/IMG-20251011-WA0031.jpg';
+import porfolioImage5 from '../images/portfolio/IMG-20251011-WA0032.jpg';
+import porfolioImage6 from '../images/portfolio/IMG-20251011-WA0033.jpg';
+import porfolioImage7 from '../images/portfolio/IMG-20251011-WA0034.jpg';
+import porfolioImage8 from '../images/portfolio/IMG-20251011-WA0035.jpg';
+import porfolioImage9 from '../images/portfolio/IMG-20251011-WA0036.jpg';
+import porfolioImage10 from '../images/building-construction-site-with-a-tower-crane-and-engineer-and-workers-paper-cut-style-vector.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -69,18 +66,17 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Egan Moshi.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm Egan Moshi, a <strong className="text-stone-100">Civil Engineer and Architectural Designer</strong> based in
+        <strong className="text-stone-100"> Dodoma, Tanzania</strong>. I’m passionate about designing sustainable and
+        functional structures that blend creativity with practical engineering solutions.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time, I enjoy sketching architectural concepts, studying modern construction techniques, and
+        exploring the evolving landscape of Tanzanian architecture.
       </p>
     </>
   ),
@@ -104,16 +100,18 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `I am a Civil Engineer and Architectural Designer from Dodoma, Tanzania. I hold a Bachelor of Civil
+  Engineering (2024) from Mbeya University of Science and Technology. I have performed industrial practical
+  training across Tanzania focusing on structural design, site inspection, road maintenance and bridge works.
+  I enjoy applying practical engineering solutions to construction challenges and producing clear technical
+  documentation and sketches for upcoming projects.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Dodoma, Tanzania', Icon: MapIcon},
+    {label: 'Date of birth', text: '14 April 2000', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Tanzanian', Icon: FlagIcon},
+    {label: 'Languages', text: 'English, Kiswahili', Icon: SparklesIcon},
+    {label: 'Study', text: 'Mbeya University of Science and Technology (B.Eng, Civil)', Icon: AcademicCapIcon},
+    {label: 'Availability', text: 'Open to opportunities', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -122,71 +120,30 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: 'Civil engineering',
     skills: [
-      {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
+      {name: 'Structural analysis & design', level: 8},
+      {name: 'Road & bridge inspection', level: 7},
+      {name: 'Construction management', level: 7},
+      {name: 'Soil laboratory testing', level: 6},
+      {name: 'Report writing', level: 8},
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'Design & modelling tools',
     skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
-      {
-        name: 'GraphQL',
-        level: 6,
-      },
+      {name: 'Archicad + Lumion', level: 8},
+      {name: 'SketchUp + Enscape', level: 7},
+      {name: 'AutoCAD & Civil 3D', level: 7},
+      {name: 'Prota-Structure, ETABS', level: 7},
+      {name: 'MS Project', level: 6},
     ],
   },
   {
-    name: 'Backend development',
+    name: 'General skills',
     skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
-      },
+      {name: 'Microsoft Office (Word, Excel, PowerPoint)', level: 9},
+      {name: 'Driving (Class A & D)', level: 7},
     ],
   },
 ];
@@ -196,71 +153,66 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Box Culvert Construction (CN04)',
+    description: 'World Bank SEAP project: box culvert construction and embankment raising — site works and monitoring.',
+    url: '#',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Bridge Inspection & Inventory',
+    description: 'Regional bridge inventory and inspection surveys across Kilimanjaro.',
+    url: '#',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Road Maintenance Works',
+    description: 'Pothole identification, pre-marking and patching under periodic maintenance programs.',
+    url: '#',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Structural Detailing (Estate Care)',
+    description: 'Structural design and drafting using Prota-Structure and AutoCAD for consultancy projects.',
+    url: '#',
     image: porfolioImage4,
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Site Sketches & Layouts',
+    description: 'Preparation of site sketches and preliminary layouts for upcoming projects.',
+    url: '#',
     image: porfolioImage5,
   },
   {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Culvert & Drainage Design',
+    description: 'Design studies for box culverts and drainage solutions to mitigate water rise issues.',
+    url: '#',
     image: porfolioImage6,
   },
   {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Construction Supervision',
+    description: 'Assisted in inspection and supervision of ongoing construction works ensuring compliance.',
+    url: '#',
     image: porfolioImage7,
   },
   {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Surveying & Mapping',
+    description: 'Site visits, map study and preparation of project progress reports.',
+    url: '#',
     image: porfolioImage8,
   },
   {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Archicad & 3D Visuals',
+    description: 'Architectural sketches and 3D visuals using Archicad, Lumion and SketchUp.',
+    url: '#',
     image: porfolioImage9,
   },
   {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Construction Concept Illustration',
+    description: 'Illustrative concept for a construction site and workforce coordination.',
+    url: '#',
     image: porfolioImage10,
   },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
-  },
+  
 ];
 
 /**
@@ -268,40 +220,79 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2020 - 2024',
+    location: 'Mbeya University of Science and Technology, Mbeya',
+    title: "Bachelor of Civil Engineering",
+    content: (
+      <p>
+        Studied civil engineering fundamentals including structural design, geotechnical engineering, hydraulics,
+        and construction management. Final-year projects and practical training focused on structural and road works.
+      </p>
+    ),
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2018 - 2020',
+    location: 'Kemebos Secondary School',
+    title: 'Advanced Certificate of Secondary Education (ACSEE)',
+    content: <p>Completed secondary education with emphasis on sciences and mathematics.</p>,
+  },
+  {
+    date: '2014 - 2017',
+    location: 'Saint Amedeus Secondary School',
+    title: 'Ordinary Level Secondary Education (CSEE)',
+    content: <p>Completed Ordinary Level with coursework in mathematics and sciences.</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'November 2024 - August 2025',
+    location: 'TANROADS - Kilimanjaro Region',
+    title: 'SEAP Trainee / SEAP Engineer',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <>
+        <p>
+          Participated in the World Bank SEAP project for construction of box culverts and embankment raising. Duties
+          included progress reporting, bridge inventory, periodic road maintenance, preparation of sketches for
+          upcoming projects and land valuation support.
+        </p>
+      </>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'October 2023 - November 2023',
+    location: 'Estate Care Consultancy Limited',
+    title: 'Field Trainee (Structural Design)',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <>
+        <p>Participated in structural designing activities and practical training using Prota-Structure, AutoCAD and ETABS.</p>
+      </>
+    ),
+  },
+  {
+    date: 'July 2022 - September 2022',
+    location: 'TARURA - Kilimanjaro',
+    title: 'Industrial Practical Training (Field)',
+    content: (
+      <>
+        <p>
+          Conducted site inspections, prepared sketches for upcoming projects, studied bridge and culvert maps and
+          assisted with progress reporting for maintenance works across the Kilimanjaro region.
+        </p>
+      </>
+    ),
+  },
+  {
+    date: 'July 2021 - September 2021',
+    location: 'CRJE (China Railway Jianchang Engineering Ltd) / Moshi Municipal Council',
+    title: 'Industrial Practical Training (Field Student)',
+    content: (
+      <>
+        <p>
+          Assisted with inspection and supervision of ongoing works, studied architectural and structural layouts, and
+          collaborated with senior engineers to ensure compliance with project standards.
+        </p>
+      </>
     ),
   },
 ];
@@ -350,8 +341,8 @@ export const contact: ContactSection = {
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@am_acg__',
+      href: 'https://www.instagram.com/am_acg__/',
     },
     {
       type: ContactType.Github,
@@ -365,9 +356,7 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/egan-moshi-4aa004314/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/am_acg__/'},
   {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
 ];
