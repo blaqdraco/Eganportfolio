@@ -43,23 +43,23 @@ const Portfolio: FC = memo(() => {
         <h2 className="self-center text-xl font-bold text-white">Check out some of my work</h2>
         <div className="relative">
           {/* gradient edges */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-neutral-800 to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-neutral-800 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-neutral-800 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-neutral-800 to-transparent" />
 
           {/* controls */}
           <button
             aria-label="Previous"
-            className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-neutral-900/60 p-2 text-white backdrop-blur transition hover:bg-neutral-900/80"
+            className="absolute left-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-neutral-900/60 p-3 text-white backdrop-blur transition hover:bg-neutral-900/80"
             onClick={handlePrev}
             type="button">
-            <ChevronLeftIcon className="h-5 w-5" />
+            <ChevronLeftIcon className="h-6 w-6" />
           </button>
           <button
             aria-label="Next"
-            className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-neutral-900/60 p-2 text-white backdrop-blur transition hover:bg-neutral-900/80"
+            className="absolute right-3 top-1/2 z-20 -translate-y-1/2 rounded-full bg-neutral-900/60 p-3 text-white backdrop-blur transition hover:bg-neutral-900/80"
             onClick={handleNext}
             type="button">
-            <ChevronRightIcon className="h-5 w-5" />
+            <ChevronRightIcon className="h-6 w-6" />
           </button>
 
           {/* slider track */}
@@ -70,10 +70,17 @@ const Portfolio: FC = memo(() => {
               const {title, image} = item;
               return (
                 <div
-                  className="snap-start shrink-0 w-[85%] sm:w-[70%] md:w-1/2 lg:w-[40%] xl:w-[33%]"
+                  className="snap-center shrink-0 w-[95%] sm:w-[85%] md:w-3/4 lg:w-1/2 xl:w-[45%] 2xl:w-[40%]"
                   key={`${title}-${index}`}>
-                  <div className="relative h-full w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl">
-                    <Image alt={title} className="h-full w-full" placeholder="blur" src={image} />
+                  <div className="relative w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl aspect-[4/3] sm:aspect-[16/10] lg:aspect-[16/9]">
+                    <Image
+                      alt={title}
+                      className="object-contain bg-neutral-900"
+                      fill
+                      placeholder="blur"
+                      sizes="(min-width: 1536px) 40vw, (min-width: 1280px) 45vw, (min-width: 1024px) 50vw, (min-width: 768px) 75vw, (min-width: 640px) 85vw, 95vw"
+                      src={image}
+                    />
                     <ItemOverlay image={image} onOpen={openModal} />
                   </div>
                 </div>
