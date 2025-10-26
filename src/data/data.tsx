@@ -1,3 +1,4 @@
+/* eslint-disable simple-import-sort/imports */
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
@@ -12,16 +13,30 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import TikTokIcon from '../components/Icon/TikTokIcon';
 import heroImage from '../images/building-construction-site-with-a-tower-crane-and-engineer-and-workers-paper-cut-style-vector.jpg';
-import porfolioImage1 from '../images/portfolio/IMG-20251011-WA0028.jpg';
-import porfolioImage2 from '../images/portfolio/IMG-20251011-WA0029.jpg';
-import porfolioImage3 from '../images/portfolio/IMG-20251011-WA0030.jpg';
-import porfolioImage4 from '../images/portfolio/IMG-20251011-WA0031.jpg';
-import porfolioImage5 from '../images/portfolio/IMG-20251011-WA0032.jpg';
-import porfolioImage6 from '../images/portfolio/IMG-20251011-WA0033.jpg';
-import porfolioImage7 from '../images/portfolio/IMG-20251011-WA0034.jpg';
-import porfolioImage8 from '../images/portfolio/IMG-20251011-WA0035.jpg';
-import porfolioImage9 from '../images/portfolio/IMG-20251011-WA0036.jpg';
-import porfolioImage10 from '../images/portfolio/WhatsApp Image 2025-10-11 at 13.29.20_3dce9a37.jpg';
+import porfolioImage1 from '../images/portfolio/IMG-20251025-WA0023.jpg';
+import porfolioImage2 from '../images/portfolio/IMG-20251025-WA0024.jpg';
+import porfolioImage3 from '../images/portfolio/IMG-20251025-WA0025.jpg';
+import porfolioImage4 from '../images/portfolio/IMG-20251025-WA0026.jpg';
+import porfolioImage5 from '../images/portfolio/IMG-20251025-WA0027.jpg';
+import porfolioImage6 from '../images/portfolio/IMG-20251025-WA0028.jpg';
+import porfolioImage7 from '../images/portfolio/IMG-20251025-WA0029.jpg';
+import porfolioImage8 from '../images/portfolio/IMG-20251025-WA0030.jpg';
+import porfolioImage9 from '../images/portfolio/IMG-20251025-WA0031.jpg';
+import porfolioImage10 from '../images/portfolio/IMG-20251025-WA0032.jpg';
+import porfolioImage11 from '../images/portfolio/IMG-20251025-WA0033.jpg';
+import porfolioImage12 from '../images/portfolio/IMG-20251025-WA0034.jpg';
+import porfolioImage13 from '../images/portfolio/IMG-20251025-WA0035.jpg';
+import porfolioImage14 from '../images/portfolio/IMG-20251011-WA0028.jpg';
+import porfolioImage15 from '../images/portfolio/IMG-20251011-WA0029.jpg';
+import porfolioImage16 from '../images/portfolio/IMG-20251011-WA0030.jpg';
+import porfolioImage17 from '../images/portfolio/IMG-20251011-WA0031.jpg';
+import porfolioImage18 from '../images/portfolio/IMG-20251011-WA0032.jpg';
+import porfolioImage19 from '../images/portfolio/IMG-20251011-WA0033.jpg';
+import porfolioImage20 from '../images/portfolio/IMG-20251011-WA0034.jpg';
+import porfolioImage21 from '../images/portfolio/IMG-20251011-WA0035.jpg';
+import porfolioImage22 from '../images/portfolio/IMG-20251011-WA0036.jpg';
+import porfolioImage23 from '../images/portfolio/WhatsApp Image 2025-10-11 at 13.29.20_3dce9a37.jpg';
+import porfolioImage24 from '../images/portfolio/WhatsApp Image 2025-10-11 at 13.56.27_ed0a6037.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
@@ -212,6 +227,90 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'Illustrative concept for a construction site and workforce coordination.',
     url: '#',
     image: porfolioImage10,
+  },
+  {
+    title: 'Field Supervision',
+    description: 'On-site supervision activities and coordination with contractors.',
+    url: '#',
+    image: porfolioImage11,
+  },
+  {
+    title: 'Materials & Site Works',
+    description: 'Monitoring of materials and field works across project sites.',
+    url: '#',
+    image: porfolioImage12,
+  },
+  {
+    title: 'Project Site Overview',
+    description: 'Overview snapshots from ongoing construction and inspection tasks.',
+    url: '#',
+    image: porfolioImage13,
+  },
+  {
+    title: 'Field Work — October Set 1',
+    description: 'Additional field work photography from October 11 series.',
+    url: '#',
+    image: porfolioImage14,
+  },
+  {
+    title: 'Field Work — October Set 2',
+    description: 'Additional field work photography from October 11 series.',
+    url: '#',
+    image: porfolioImage15,
+  },
+  {
+    title: 'Field Work — October Set 3',
+    description: 'Additional field work photography from October 11 series.',
+    url: '#',
+    image: porfolioImage16,
+  },
+  {
+    title: 'Field Work — October Set 4',
+    description: 'Additional field work photography from October 11 series.',
+    url: '#',
+    image: porfolioImage17,
+  },
+  {
+    title: 'Field Work — October Set 5',
+    description: 'Additional field work photography from October 11 series.',
+    url: '#',
+    image: porfolioImage18,
+  },
+  {
+    title: 'Field Work — October Set 6',
+    description: 'Additional field work photography from October 11 series.',
+    url: '#',
+    image: porfolioImage19,
+  },
+  {
+    title: 'Field Work — October Set 7',
+    description: 'Additional field work photography from October 11 series.',
+    url: '#',
+    image: porfolioImage20,
+  },
+  {
+    title: 'Field Work — October Set 8',
+    description: 'Additional field work photography from October 11 series.',
+    url: '#',
+    image: porfolioImage21,
+  },
+  {
+    title: 'Field Work — October Set 9',
+    description: 'Additional field work photography from October 11 series.',
+    url: '#',
+    image: porfolioImage22,
+  },
+  {
+    title: 'Concept — WhatsApp Capture 1',
+    description: 'Concept capture from work-in-progress sharing.',
+    url: '#',
+    image: porfolioImage23,
+  },
+  {
+    title: 'Concept — WhatsApp Capture 2',
+    description: 'Concept capture from work-in-progress sharing.',
+    url: '#',
+    image: porfolioImage24,
   },
   
 ];
